@@ -151,19 +151,22 @@ void loop()
 Il ciclo FOR esegue delle determinate istruzione per un determinato numero di volte, ecco qui un esempio che crea un effetto LED:
 
 ```c
-#define CICLI 7 // Il numero di cicli che vogliamo eseguire
+#define INIZIO 0
+#define FINE 7
+
 void setup() {
-  for (int i = 0; i <= CICLI; i++) {  
+  for (int i = INIZIO; i <= FINE; i++) {
   	pinMode(i, OUTPUT);
   }
 }
+
 void loop() {
-  for (int i = 0; i <= CICLI; i++) {  // L'inizio del ciclo for
-  	digitalWrite(i, HIGH);  // Le istruzioni che vengono eseguite 7 volte 
+  for (int i = INIZIO; i <= FINE; i++) {
+  	digitalWrite(i, HIGH);
     delay(250);
   }
   
-  for (int i = 0; i <= CICLI; i++) {
+  for (int i = INIZIO; i <= FINE; i++) {
   	digitalWrite(i, LOW);
     delay(250);
   }
